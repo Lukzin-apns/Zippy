@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <title>Zippy</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+  <div class="container">
+    <img src="images/friendnest-logo.png" alt="Zippy Logo" class="logo"> 
+    <h1>FriendNest</h1>
+    <p class="description">A rede social que conecta você aos seus amigos de forma simples
+    <p class="slogan">Aqui é onde as conexões começam — e fazem sentido</p>
+
+    <div class="form-box"> 
+      <input type="email" id="email" placeholder="Email" aria-label="Email">
+      <input type="password" id="password" placeholder="Password">
+      <button onclick="login()"><i class="fas fa-sign-in-alt"></i> Login</button>
+      <button onclick="signup()"><i class="fas fa-user-plus"></i> Criar Conta</button>
+
+
+      <div id="status-message" class="status"></div>
+      <div class="links">
+  <a href="#" onclick="forgotPassword()">esqueci a minha senha?</a>
+  <a href="#" onclick="showPrivacyPolicy()">Política de Privacidade</a>
+</div>
+<div id="policyModal" class="modal">
+  <div class="modal-content">
+    <span onclick="closeModal()" class="close">&times;</span>
+    <h3>Privacy Policy</h3>
+    <p>
+      A FriendNest se importa com a sua privacidade.
+Coletamos só o que é necessário para melhorar sua experiência.
+Seus dados nunca serão vendidos ou compartilhados sem a sua permissão. ❤️
+    </p>
+  </div>
+</div>
+
+<script src="https://www.gstatic.com/firebasejs/10.11.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.11.0/firebase-auth.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
+
